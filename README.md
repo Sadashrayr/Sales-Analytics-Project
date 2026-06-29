@@ -16,13 +16,13 @@ The project includes SQL-based data cleaning and analysis, an interactive Excel 
 
 ### 📊 Microsoft Excel Dashboard
 
-Images/Dashboard (Excel).png
+![Microsoft Excel Dashboard](Images/Dashboard%20(Excel).png)
 
 ---
 
 ### 📈 Power BI Dashboard
 
-Images/Dashboard (Power BI).png
+![Power BI Dashboard](Images/Dashboard%20(Power%20BI).png)
 
 ---
 
