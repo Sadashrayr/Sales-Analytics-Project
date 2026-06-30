@@ -112,6 +112,30 @@
     -- -> Mostly orders are shipped within 3 to 5 days
     -- -> while very few orders get shipped on the same day or take more than 6 days.
     
+-- 11. what are the percentage distribution of sales a)category wise  b)Region wise ? 
+		-- a)
+		SELECT
+			Category,
+			ROUND(SUM(Sales),2) AS Sales,
+			ROUND(
+				SUM(Sales) * 100 /
+				(SELECT SUM(Sales) FROM superstore_staging),2
+			) AS Sales_Percentage
+		FROM superstore_staging
+		GROUP BY Category
+		ORDER BY Sales DESC; 
+		-- b)
+		SELECT
+			Region,
+			ROUND(SUM(Sales),2) AS Sales,
+			ROUND(
+				SUM(Sales)*100/
+				(SELECT SUM(Sales) FROM superstore_staging),2
+			) AS Sales_Percentage
+		FROM superstore_staging
+		GROUP BY Region
+		ORDER BY Sales DESC;
+			
     
     /* ==========================================
             BUSINESS INSIGHTS
